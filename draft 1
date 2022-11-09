@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>   //for using sqrt() function for squareroot
-#include <cstdlib> //to get exit function to quit program
+#include <cstdlib> //to get exit() function to quit program
 using namespace std;
 
 void addition()
@@ -90,6 +90,7 @@ void power()
     {
         pow = pow * a;
     }
+    //we could've used pow() function from cmath library as well
     cout << "The ans of " << a << " raised to the power of " << b << " is: " << pow << endl;
 }
 void remainder()
@@ -104,7 +105,7 @@ void remainder()
 
 int main()
 {
-    cout << "\t\t\t\t\t\t\t\tWelcome to the C++ Calculator!\n"
+    cout << "\t\t\t\t\t\tWelcome to the C++ Calculator!\n"
          << endl;
     cout << "********************PRESS 0 to QUIT program******************\n"
          << endl;
