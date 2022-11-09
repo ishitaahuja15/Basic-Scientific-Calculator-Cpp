@@ -1,0 +1,183 @@
+#include <iostream>
+#include <cmath>   //for using sqrt() function for squareroot
+#include <cstdlib> //to get exit function to quit program
+using namespace std;
+
+void addition()
+{
+    int a, b;
+    cout << "Enter the no. you want to add: ";
+    cin >> a;
+    cout << "Enter the no. you want to add: ";
+    cin >> b;
+    cout << "The addition of " << a << " and " << b << " is: " << a + b << endl;
+}
+void subtraction()
+{
+    int a, b;
+    cout << "Enter the no. you want to subtract from: ";
+    cin >> a;
+    cout << "Enter the no. you want to subtract: ";
+    cin >> b;
+    cout << "The subtraction of " << a << " and " << b << " is: " << a - b << endl;
+}
+
+void multiplication()
+{
+    int a, b;
+    cout << "Enter the no. you want to multiply: ";
+    cin >> a;
+    cout << "Enter the no. you want to multiply: ";
+    cin >> b;
+    cout << "The addition of " << a << " and " << b << " is: " << a * b << endl;
+}
+
+void division()
+{
+    int a, b;
+    cout << "Enter the dividend: ";
+    cin >> a;
+    cout << "Enter the divisor: ";
+    cin >> b;
+    cout << "The division of " << a << " and " << b << " is: " << a / b << endl;
+}
+
+void factorial()
+{
+    int n;
+    cout << "Enter the no. you want the factorial of: ";
+    cin >> n;
+    long factorial = 1.0;
+    for (int i = 1; i <=n ; ++i)
+    {
+        factorial = factorial*i;
+    }
+    cout << "The Factorial of the given no. " << n << " is: " << factorial << endl;
+}
+void squareroot()
+{
+    int a;
+    cout << "Enter the no. you want squareroot of: ";
+    cin >> a;
+    int sqr = sqrt(a);
+    int result = int(sqr);
+    cout << "The Squareroot of " << a << " is: " << result << endl;
+}
+void square()
+{
+    int a;
+    cout << "Enter the no. you want square of: ";
+    cin >> a;
+    cout << "The square of the given no. " << a << " is: " << a * a << endl;
+}
+void cube()
+{
+    int a;
+    cout << "Enter the no. you want cube of: ";
+    cin >> a;
+    cout << "The cube of the given no. " << a << " is: " << a * a * a << endl;
+}
+void power()
+{
+    int a, b;
+    cout << "Enter the no. you want at base: ";
+    cin >> a;
+    cout << "Enter the no.to be raised to the power of base no.: ";
+    cin >> b;
+    int i;
+    int pow = a;
+    for (i = 2; i <= b; i++)
+    {
+        pow = pow * a;
+    }
+    cout << "The ans of " << a << " raised to the power of " << b << " is: " << pow << endl;
+}
+void remainder()
+{
+    int a, b;
+    cout << "Enter the dividend: ";
+    cin >> a;
+    cout << "Enter the divisor: ";
+    cin >> b;
+    cout << "The modulus or remainder of " << a << " divided to " << b << " is: " << a % b << endl;
+}
+
+int main()
+{
+    cout << "\t\t\t\t\t\t\t\tWelcome to the C++ Calculator!\n"
+         << endl;
+    cout << "********************PRESS 0 to QUIT program******************\n"
+         << endl;
+    cout << "Enter 1 for ADDITION \n";
+    cout << "Enter 2 for SUBTRACTION \n";
+    cout << "Enter 3 for MULTIPLICATION \n";
+    cout << "Enter 4 for DIVISION \n";
+    cout << "Enter 5 for FACTORIAL \n";
+    cout << "Enter 6 for SQUAREROOT \n";
+    cout << "Enter 7 for SQUARE \n";
+    cout << "Enter 8 for CUBE \n";
+    cout << "Enter 9 for POWER \n";
+    cout << "Enter 10 for REMAINDER \n";
+
+    while (1)
+    {
+
+        int choice;
+        cout << "Enter the choice of operation you wish to perform:  \n";
+        cin >> choice;
+
+        switch (choice)
+        {
+
+        case 1:
+            addition();
+            break;
+
+        case 2:
+            subtraction();
+            break;
+
+        case 3:
+            multiplication();
+            break;
+
+        case 4:
+            division();
+            break;
+
+        case 5:
+            factorial();
+            break;
+
+        case 6:
+            squareroot();
+            break;
+
+        case 7:
+            square();
+            break;
+
+        case 8:
+            cube();
+            break;
+
+        case 9:
+            power();
+            break;
+
+        case 10:
+            remainder();
+            break;
+
+        case 0:
+            exit(0);
+            break;
+
+        default:
+            cout << "Invalid. Enter a valid choice " << endl;
+            break;
+        }
+    }
+
+    return 0;
+}
